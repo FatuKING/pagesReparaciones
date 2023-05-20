@@ -1,0 +1,212 @@
+:root {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+
+  --process-cyan: hsla(195, 86%, 50%, 1);
+  --blue-ncs: hsla(200, 78%, 41%, 1);
+  --yinmn-blue: hsla(210, 68%, 33%, 1);
+  --penn-blue: hsla(236, 48%, 24%, 1);
+}
+
+
+body{
+  height: 100%;
+  margin: 0%;
+  font-family: "Alatsi", sans-serif;
+}
+
+/* Estilos Header */
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Estilos menu*/
+.navbar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.navbar h1{
+  z-index: 10000;
+}
+
+/* Estilos Logo */
+.navbar h1 a{
+  padding-left: 20px;
+  font-size: min(calc(2vw + 1rem), 2rem);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.navbar h1 a:hover{
+  color: #ccd;
+
+}
+
+.menuContenedor{
+  position: fixed;
+  top: 0;
+  right: 80%;
+  height: 100%;
+  width: 20%;
+  background-color: #fff;
+  z-index: 9999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  background-color: transparent;
+}
+
+.menuContenedor.show{
+  transform: translateX(0);
+}
+
+.menuContenedor ul{
+  position: fixed;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  padding-left: 20px;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+}
+
+
+.menuContenedor ul li a{
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menuContenedor ul li a:hover{
+  color: #ccd;
+  border-left: 5px solid #9500ff;
+  padding-left: 10px;
+}
+
+
+/* Estilos boton menu */
+.menuBtn{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 10000;
+  
+}
+
+.menuBtn i{
+  font-size: min(calc(2vw + 1rem), 2rem);
+}
+
+
+/* Estilo */
+.fondoHeader{
+  /* flex: 1;
+  overflow: hidden; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.fondoHeader img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Estilos Titulo Header */
+.tituloHeader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.tituloHeader h2{
+  text-wrap: balance; /* Nueva propiedad para dar balance al texto */
+  white-space: pre-line;
+  font-size: min(calc(2vw + 2.5rem), 5rem);
+  margin-bottom: 2rem;
+  color: #FFFFF0;
+}
+
+/* Estilos botones Header*/
+.botonesHeader{
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.btn1{
+  border: 0;
+  background-image: linear-gradient(
+    150deg,
+    #9500ff,
+    #09f,
+    #00DDFF
+  );
+  border-radius: 0.4rem;
+  display: flex;
+  justify-content: center;
+  font-size: min(calc(2vw + 1rem), 2rem);
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn1 span{
+  display: flex;
+  align-items: center;
+  background-color: rgba(17, 17, 17);
+  padding: 0.8rem 1.4rem;
+  border: 0.4rem;
+  transition: .3s;
+}
+
+.btn1 span a{
+  text-decoration: none;
+  background-image: linear-gradient(
+    150deg,
+    #9500ff,
+    #09f,
+    #00DDFF
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn1:active{
+  transform: scale(0.9);
+}
+
+.btn1 span:hover{
+  background: none;
+}
+
+.btn1 span a:hover{
+  -webkit-text-fill-color: #fff;
+} 
+
+
+
+
