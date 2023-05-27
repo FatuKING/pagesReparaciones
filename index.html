@@ -2,73 +2,89 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/public/assets/img/favicon1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>FCOMPUTER - Mantenimiento y Reparación de equipos</title>
   </head>
   <body>
     <header class="header">
       <nav class="navbar">
-        <h1>
-          <a href="#">Facundo Cozzani</a>
-        </h1>
+        <div class="contenedor">
+          <h1 class="marca">
+            <a href="#"><span>f</span>computer</a>
+          </h1>
         
-        <button class="menuBtn" id="menuBtn">
-          <i class="bi bi-list"></i>
-          <!-- <img src="./public/assets/img/menupng.png" alt=""> -->
-        </button>
-
-        <div class="menuContenedor" id="menuContenedor">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre mi</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
+          <button class="btn">
+            <a href="https://wa.me/1173687952" target="_blank">Contactenos</a>
+          </button>
         </div>
       </nav>
 
-      <div class="fondoHeader">
-        <img src="./public/assets/img/fondo.jpeg" alt="">
-        <div class="tituloHeader">
-          <h2>Reparacion de Noteobook & Desktop</h2>
+      <div class="imagenFondo">    
+        <img id="imagenFondo" src="/public/assets/img/fondo7.jpg" alt="notebookFondo">
 
-          <div class="botonesHeader">
-            <button class="btn1">
-              <span>
-                <a href="https://wa.me/1173687952" target="_blank">Contáctenos</a>
-              </span>
-            </button>
-
-            <button class="btn1">
-              <span>
-                <a href="#" target="_blank">Sobre Mi</a>
-              </span>
-            </button>
-          </div>
+        <div class="contenedorTexto">
+          <h2>Servicios de Reparación</h2>
+          <p>Computadoras de escritorío & Notebooks</p>
         </div>
       </div>
-      
+
     </header>
 
-    <main>
+    <main class="main">
+      <section class="contenedorMain" data-aos="slide-up">
+        <article>
+          <h2>¡Quienes Somos!</h2>
 
-      <section class="Servicios">
-        <article class="">
+          <p>Somos una empresa de reparación de computadoras en la zona norte con más de 5 años de experiencia. Nos dedicamos a solucionar todo tipo de problemas informáticos, brindando un servicio confiable y eficiente. <br><br>
+          
+          Tratamos cada caso con profesionalismo y dedicación, entendiendo que cada situación es única. Nuestro principal objetivo es devolverte tu computadora en óptimas condiciones en el menor tiempo posible, sin comprometer la calidad del servicio. <br><br>
+
+          "Reparación informática confiable para un rendimiento sin límites"
+          </p>
+        </article>
+      </section>
+
+      <section class="servicios">
+        <article class="carta" data-aos=""> 
+          <h2>Software</h2>
+          <hr>
+          
+          <ul>
+            <li>Instalación de Sistemas Operativos</li>
+            <li>Instalación de Programas de Diseño</li>
+            <li>Instalación Paquete Office</li>
+            <li>Instalación de Impresoras</li>
+            <li>Actualización de Drivers</li>
+            <li></li>
+          </ul>
+        </article>
+
+        <article class="carta" data-aos="">
+          <h2>Hardware</h2>
+          <hr>
+          <ul>
+            <li>Reparación de PC & Notebook</li>
+            <li>Mantenimiento de Equipos</li>
+            <li>Actualización de Componentes</li>
+          </ul>
 
         </article>
-        <article class="">
 
-        </article>
-        <article class="">
-
+        <article class="carta" data-aos="">
+          <h2>Soporte Remoto</h2>
+          <hr>
+          <ul>
+            <li>Brindamos servicio de asistencia remota para clientes</li>
+            <li>Actualización de drivers</li>
+          </ul>
         </article>
       </section>
 
     </main>
 
     <footer>
-
+      
     </footer>
     
     <script type="module" src="/main.js"></script>

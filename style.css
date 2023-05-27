@@ -1,3 +1,4 @@
+
 :root {
   padding: 0%;
   margin: 0%;
@@ -9,204 +10,186 @@
   --penn-blue: hsla(236, 48%, 24%, 1);
 }
 
-
+/* Grid layout */
 body{
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: 
+  "header header header"
+  "main main main"
+  "footer footer footer"; */
   height: 100%;
+  width: 100%;
   margin: 0%;
+  padding: 0%;
   font-family: "Alatsi", sans-serif;
+  background: black;
 }
 
 /* Estilos Header */
 .header{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: black;
   height: 100vh;
+  grid-area: header;
+  position: relative;
 }
 
-/* Estilos menu*/
+/* Estilos navbar*/
 .navbar{
-  position: absolute;
+  display: flex;
+  
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: transparent;
+  z-index: 2; 
+
+  background: black;
+}
+
+.navbar .contenedor{
+  width: 100%;
+  margin: 10px 15px 10px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1;
 }
 
-.navbar h1{
-  z-index: 10000;
-}
-
-/* Estilos Logo */
-.navbar h1 a{
-  padding-left: 20px;
-  font-size: min(calc(2vw + 1rem), 2rem);
-  font-weight: 400;
+/* Estilos Marca */
+.contenedor .marca a{
+  font-size: min(calc(2vw + 1.5rem), 3rem);
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
   color: whitesmoke;
+  font-family: 'Bangers', sans-serif;
 }
 
-.navbar h1 a:hover{
-  color: #ccd;
-
+.contenedor .marca a:hover{
+  color: var(--process-cyan);
 }
 
-.menuContenedor{
-  position: fixed;
-  top: 0;
-  right: 80%;
-  height: 100%;
-  width: 20%;
-  background-color: #fff;
-  z-index: 9999;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-  background-color: transparent;
+.contenedor .marca a span{
+  color: var(--process-cyan);
 }
 
-.menuContenedor.show{
-  transform: translateX(0);
-}
-
-.menuContenedor ul{
-  position: fixed;
-  top: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding: 15px;
-  padding-left: 20px;
-  margin: 0;
-  list-style: none;
-  width: 100%;
-}
-
-
-.menuContenedor ul li a{
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-}
-
-.menuContenedor ul li a:hover{
-  color: #ccd;
-  border-left: 5px solid #9500ff;
-  padding-left: 10px;
-}
+/* Estilos libreria aos */
 
 
 /* Estilos boton menu */
-.menuBtn{
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10000;
-  
+.btn{
+  height: min(calc(2rem + 1rem), 3rem);
+  background-color: var(--process-cyan);
+  text-align: center;
+  border: 3px solid whitesmoke;
+  border-radius: 8px;
+  font-size: min(calc(2vw + 0.7rem), 1.3rem);
+  transition: .3s;
 }
 
-.menuBtn i{
-  font-size: min(calc(2vw + 1rem), 2rem);
+.btn a{
+  text-decoration: none;
+  padding: 0 10px 0 10px;
+  color: whitesmoke;
 }
 
+.btn:hover{
+  transform: scale(1.1);
+}
 
-/* Estilo */
-.fondoHeader{
-  /* flex: 1;
-  overflow: hidden; */
-  position: absolute;
-  top: 0;
-  left: 0;
+.imagenFondo{
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;    
+  justify-content: center;
 }
 
-.fondoHeader img{
-  width: 100%;
+.imagenFondo img{
   height: 100%;
-  object-fit: cover;
+  width: 100%;
+  object-fit:cover;  
 }
 
-
-/* Estilos Titulo Header */
-.tituloHeader{
+.contenedorTexto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+ 
+  /* background: var(--blue-ncs); */
+  background: transparent;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.contenedorTexto h2{
+  margin: 0%;
+  color: #fff;
+  font-size: min(calc(3vw + 1.3rem), 3rem);
+  text-shadow: 5px 5px black;
+}
+
+.contenedorTexto p{
+  text-shadow: 2px 2px black;
+  margin: 0%;
+  color: #fff;
+  font-weight: 700;
+  font-size: min(calc(2vw + 0.8rem), 2rem);
+}
+
+/*
+* Estilos Cuerpo de pagina
+*/
+
+.main{
+  display: grid;
+  grid-area: main;
+}
+
+.contenedorMain{
+  width: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.tituloHeader h2{
-  text-wrap: balance; /* Nueva propiedad para dar balance al texto */
-  white-space: pre-line;
-  font-size: min(calc(2vw + 2.5rem), 5rem);
-  margin-bottom: 2rem;
-  color: #FFFFF0;
+.contenedorMain article{
+  margin: 100px 55px 100px 55px;
 }
 
-/* Estilos botones Header*/
-.botonesHeader{
-  display: flex;
+.contenedorMain h2{
+  font-size: min(calc(3vw + 1.3rem), 3rem);
+  color: whitesmoke;
+  
+}
+
+.contenedorMain p{
+  font-size: min(calc(2vw + 0.8rem), 2rem);
+  color: whitesmoke;
+}
+
+.servicios{
+  display: grid;
   justify-content: center;
-  gap: 2rem;
-}
-
-.btn1{
-  border: 0;
-  background-image: linear-gradient(
-    150deg,
-    #9500ff,
-    #09f,
-    #00DDFF
-  );
-  border-radius: 0.4rem;
-  display: flex;
-  justify-content: center;
-  font-size: min(calc(2vw + 1rem), 2rem);
-  padding: 0.3rem;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.btn1 span{
-  display: flex;
   align-items: center;
-  background-color: rgba(17, 17, 17);
-  padding: 0.8rem 1.4rem;
-  border: 0.4rem;
-  transition: .3s;
+  gap: 3rem;
+  background: blue;
 }
 
-.btn1 span a{
-  text-decoration: none;
-  background-image: linear-gradient(
-    150deg,
-    #9500ff,
-    #09f,
-    #00DDFF
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+.servicios .carta{
+  border: 3px solid;
+  border-radius: 30px;
+  background: green;
 }
 
-.btn1:active{
-  transform: scale(0.9);
+.servicios .carta h2{
+  text-align: center;
 }
-
-.btn1 span:hover{
-  background: none;
-}
-
-.btn1 span a:hover{
-  -webkit-text-fill-color: #fff;
-} 
-
-
-
-

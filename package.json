@@ -15,6 +15,9 @@
     "@fontsource/abeezee": "^4.5.10",
     "@fontsource/abyssinica-sil": "^4.5.2",
     "@fontsource/alatsi": "^4.5.11",
+    "@fontsource/bangers": "^5.0.0",
+    "@fontsource/space-mono": "^5.0.0",
+    "aos": "^3.0.0-beta.6",
     "bootstrap-icons": "^1.10.5"
   }
 }
