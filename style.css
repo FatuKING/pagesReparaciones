@@ -10,15 +10,8 @@
   --penn-blue: hsla(236, 48%, 24%, 1);
 }
 
-/* Grid layout */
+/*  */
 body{
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: 
-  "header header header"
-  "main main main"
-  "footer footer footer"; */
   height: 100%;
   width: 100%;
   margin: 0%;
@@ -80,9 +73,9 @@ body{
 /* Estilos boton menu */
 .btn{
   height: min(calc(2rem + 1rem), 3rem);
-  background-color: var(--process-cyan);
+  background-color: black;
   text-align: center;
-  border: 3px solid whitesmoke;
+  border: 3px solid var(--process-cyan);
   border-radius: 8px;
   font-size: min(calc(2vw + 0.7rem), 1.3rem);
   transition: .3s;
@@ -91,7 +84,7 @@ body{
 .btn a{
   text-decoration: none;
   padding: 0 10px 0 10px;
-  color: whitesmoke;
+  color: var(--process-cyan);
 }
 
 .btn:hover{
@@ -120,7 +113,6 @@ body{
   align-items: center;
   width: 100%;
  
-  /* background: var(--blue-ncs); */
   background: transparent;
   position: absolute;
   text-align: center;
@@ -166,7 +158,7 @@ body{
 
 .contenedorMain h2{
   font-size: min(calc(3vw + 1.3rem), 3rem);
-  color: whitesmoke;
+  color: var(--process-cyan);
   
 }
 
@@ -177,19 +169,48 @@ body{
 
 .servicios{
   display: grid;
+  grid-auto-rows: 35rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 45rem));
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  background: blue;
+  gap: 4rem;
+  background: black;
 }
 
 
 .servicios .carta{
-  border: 3px solid;
+  border: 3px solid var(--process-cyan);
   border-radius: 30px;
-  background: green;
+  background: black;
+}
+
+.servicios .carta hr{
+  border: solid var(--process-cyan);
 }
 
 .servicios .carta h2{
   text-align: center;
+  font-size: min(calc(1vw + 1.7rem), 2rem);
+  color: var(--process-cyan);
+}
+
+
+.servicios .carta ul li{
+  list-style: none;
+  font-size: min(calc(1vw + 1.3rem), 1.5rem);
+  color: whitesmoke;
+  padding-top: 10px;
+}
+
+/*
+* Estilos Footer
+*/
+
+.footer{
+  display: grid;
+  grid-auto-rows: 35rem;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 45rem));
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 150px;
+  color: whitesmoke;
 }
