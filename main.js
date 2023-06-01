@@ -1,7 +1,8 @@
 // Scripts
 import AOS from 'aos';
 AOS.init(
-    {duration:1200}
+    {duration:2000,
+    delay:70}
     );
 
  

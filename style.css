@@ -214,3 +214,29 @@ body{
   padding-top: 150px;
   color: whitesmoke;
 }
+
+.contenedorFooter article h2,
+.contenedorFooter2 article h2{
+  font-size: min(calc(1vw + 1.7rem), 3rem);
+  color: var(--process-cyan);
+}
+
+.contenedorFooter article p{
+  font-size: min(calc(1vw + 1.2rem), 1.5rem);
+}
+
+.contenedorFooter2 article ul{
+  list-style: none;
+  font-size: min(calc(1vw + 1.2rem), 1.5rem);
+}
+
+.contenedorFooter2 article .redes{
+  display: flex;
+  gap: 30px;
+  font-size: min(calc(1vw + 2rem), 4rem);
+}
+
+.contenedorFooter2 article .redes li:hover{
+  color: var(--process-cyan);
+  scale: 1.2;
+}
